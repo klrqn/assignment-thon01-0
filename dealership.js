@@ -1,7 +1,41 @@
-var myHonda = {color: 'red', wheels: 4, engine: {cylinders: 4, size: 2.2}};
-
 var dealership = {
+	sedan:
+	{
+		price: 75,
+		stock: 1,
+		available: function() {
+			if (this.stock > 0)
+				// es6 template literals
+				return `there are ${this.stock} available`;
+			else
+				return "There are no sedans available at this time, sorry!";
+		}
+	},
 
+	suv:
+	{
+		price: 100,
+		stock: 2,
+		available: function(){
+			if (this.stock > 0)
+				return "there are " + this.stock + " available";
+			else
+				return "There are no suv's available at this time, sorry!";
+		}
+	},
+
+	sports:
+	{
+		price: 100,
+		stock: 2,
+		available: function(){
+			if (this.stock > 0){
+				return "there are " + this.stock + " available";
+			} else {
+				return "There are no sportcars's available at this time, sorry!";
+			}
+		}
+	},
 }
 
 // Assignment-thon 1.0
