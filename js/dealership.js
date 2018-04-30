@@ -1,6 +1,7 @@
 var dealership = {
 	sedan:
 	{
+		type: "Sedan",
 		price: 75,
 		stock: 1,
 		available: function() {
@@ -14,11 +15,12 @@ var dealership = {
 
 	suv:
 	{
+		type: "suv",
 		price: 100,
 		stock: 2,
 		available: function(){
 			if (this.stock > 0)
-				return "there are " + this.stock + " available";
+				return `there are ${this.stock} available`;
 			else
 				return "There are no suv's available at this time, sorry!";
 		}
@@ -26,6 +28,7 @@ var dealership = {
 
 	sports:
 	{
+		type: "sportcar",
 		price: 100,
 		stock: 2,
 		available: function(){
@@ -38,16 +41,13 @@ var dealership = {
 	},
 }
 
-// Assignment-thon 1.0
-// Assignment-thon Version 1.0 (30 minutes)
+// figure out how to export TODO
+// export default dealership;
 
-// Javascript object for a car dealership
 
-// 3 car categories: sedan, suv, sports
-// rental price for each
-// available or not
-
-// total num available for each category
-// ability to submit a rental request
-
-// development done locally, or in c9, testing in browser console or c9 console only. Push to github. Branch “assignment-thon01-0”
+// jquery
+document.getElementById("sedan").innerHTML = dealership.sedan.type;
+document.getElementById("#sedanCost").append = dealership.sedan.price;
+document.getElementById("sedanNumber").innerHTML = dealership.sedan.stock;
+// document.getElementById("sedanRent").innerHTML = dealership.sedan.rent;
+document.getElementById("sedanAvailable").innerHTML = dealership.sedan.available();
