@@ -45,9 +45,8 @@ var dealership = {
 // export default dealership;
 
 
-// jquery
-document.getElementById("sedan").innerHTML = dealership.sedan.type;
-document.getElementById("#sedanCost").append = dealership.sedan.price;
-document.getElementById("sedanNumber").innerHTML = dealership.sedan.stock;
-// document.getElementById("sedanRent").innerHTML = dealership.sedan.rent;
-document.getElementById("sedanAvailable").innerHTML = dealership.sedan.available();
+// jquery to populate index
+document.getElementById("sedanCost").innerHTML = dealership.sedan.price;
+document.getElementById("sedanStock").innerHTML += dealership.sedan.stock;
+
+
